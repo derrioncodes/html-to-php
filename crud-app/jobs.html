@@ -19,6 +19,10 @@
 </head>
 <body>
 
+    <div class="create-job">
+        <button>Add a job</button>
+    </div>
+
     <div class="jobs-container">
         <div class="job">
             <div class="job-details">
@@ -28,22 +32,18 @@
             </div>
 
             <div class="job-options">
-                <i class="fa fa-ellipsis-v"></i>
+                <i id="options" class="fa fa-ellipsis-v"></i>
             </div>  
-        </div>
 
-        <div class="job">
-            <div class="job-details">
-                <h2 class="job-title">Full Stack Web Developer (Workforce)</h2>
-                <p class="job-company">Tech Skills Staffing</p>
-                <p class="date-added">March 9, 2024</p>
+            <div class="update-delete-modal-container">
+                <p class="edit">Edit</p>
+                <p class="delete">Delete</p>
+                <p class="cancel">Cancel</p>
             </div>
-
-            <div class="job-options">
-                <i class="fa fa-ellipsis-v"></i>
-            </div>  
-        </div>
+        </div> 
     </div>
-    
+
+    <div class="add-job-module"></div>
+    <script src="/js/jobs.js"></script>
 </body>
 </html>

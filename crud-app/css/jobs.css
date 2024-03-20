@@ -14,6 +14,37 @@ body{
     background-color: #f8f9fd;
 }
 
+.create-job {
+    width: 100vw;
+    display: flex;
+    justify-content:flex-end;
+    background-color: #52de97;
+
+    padding: 1.5rem 3rem;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+}
+
+.create-job button{
+    margin-top: 0px;
+    background: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    color: #333333 !important;
+    cursor: pointer;
+    box-shadow: none !important;
+    font-size: 15px;
+    height: 52px;
+    padding: .4rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    text-align: center;
+    width: 180px; 
+    
+    cursor: pointer;
+}
+
 .jobs-container{
     width: 100%;
     height: 100%;
@@ -22,6 +53,10 @@ body{
     justify-content: center;
     flex-direction: column;
     padding: 50px 0;
+
+    /* margin-top: 50px; */
+
+
 }
 
 .job {
@@ -35,6 +70,8 @@ body{
 
     display: flex;
     justify-content: space-between;
+
+    position: relative;
 }
 
 .job-details {
@@ -56,15 +93,70 @@ body{
     color: grey;
 }
 
+.job-options{
+    height: fit-content;
+}
+
 .job-options .fa{
     font-size: 25px;
     cursor: pointer;
     margin-left: 1rem;
+    cursor: pointer;
+    padding: 5px 0px 5px 5px;
 
 }
 
-@media (max-width: 575px) {
-    .form-container{
-        padding: 1.5rem 1.5rem;
+
+@media screen and (max-width: 575px) {
+    .job {
+        padding: 1.5rem;
     }
+}
+
+
+.update-delete-modal-container{
+    width: 100%;
+    max-width: 200px;
+    background-color: rgb(78, 78, 78);
+    color: white;
+    border-radius: 8px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+
+    display: none;
+    
+}
+
+.update-delete-modal-container.active{
+    display: block;
+}
+
+.update-delete-modal-container p{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.update-delete-modal-container p:hover{
+    background-color: rgb(90, 90, 90);
+}
+
+.update-delete-modal-container .edit{
+    border-bottom: 1px solid white;
+
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.update-delete-modal-container .delete{
+    color: red;
+    border-bottom: 1px solid white;
+    
+}
+
+.update-delete-modal-container .cancel{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
 }
